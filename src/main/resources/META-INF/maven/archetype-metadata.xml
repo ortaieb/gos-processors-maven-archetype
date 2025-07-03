@@ -1,0 +1,66 @@
+<archetype-descriptor
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 https://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+        name="quickstart">
+    <requiredProperties>
+        <requiredProperty key="groupId"/>
+        <requiredProperty key="artifactId"/>
+        <requiredProperty key="version"/>
+        <requiredProperty key="jdkVersion">
+            <defaultValue>21</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="quarkusVersion">
+            <defaultValue>3.18.0.CR1</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+    <fileSets>
+        <fileSet filtered="true" packaged="false">
+            <directory/>
+            <includes>
+                <include>README.md</include>
+                <include>CHANGES.md</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="false">
+            <directory/>
+            <includes>
+                <include>mvnw</include>
+                <include>mvnw.cmd</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="false" packaged="false">
+            <directory>.mvn</directory>
+        </fileSet>
+        <fileSet>
+            <directory>src/main/docker</directory>
+            <includes>
+                <include>Dockerfile.jvm</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true">
+            <directory>src/main/java</directory>
+        </fileSet>
+        <fileSet filtered="false">
+            <directory>src/main/proto</directory>
+            <includes>
+                <include>client-api.proto</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>application.properties</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true">
+            <directory>src/test/java</directory>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>src/k8s</directory>
+            <includes>
+                <include>deployment.yaml</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor>
+
