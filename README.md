@@ -1,5 +1,5 @@
 # Introduction
-The `gos-processors-maven-archetype` maven template will allow a structured project template for geppetto processors.
+The `gos-processors-maven-archetype` maven template will allow a structured project template for GOS processors.
 
 ## Using archtype
 ```bash
